@@ -5,13 +5,14 @@ Requisitos
 
 Para executar este programa, você precisa ter a biblioteca Pytube instalada. Você pode instalá-la usando o pip:
 pip install pytube
+pip install colorama
 Ou instale os requerimentos com o seguinte comando no terminal
 pip install -r requirements.txt
 Lembrando que o requerimentos esta na mesma pasta do arquivo main.py
 
 Uso
 
-Para executar o programa, execute o arquivo download_youtube.py. Ele irá solicitar que você insira o link do vídeo que deseja baixar. Se o link for inválido, uma mensagem de erro será exibida e o programa será encerrado.
+Para executar o programa, execute o arquivo main.py. Ele irá solicitar que você insira o link do vídeo que deseja baixar. Se o link for inválido, uma mensagem de erro será exibida e o programa será encerrado.
 
 Depois de inserir um link válido, o programa irá exibir uma lista de opções de resolução disponíveis para download. Insira o número correspondente à opção que deseja baixar. Se a opção não for válida, uma mensagem de erro será exibida e o programa solicitará uma nova entrada.
 

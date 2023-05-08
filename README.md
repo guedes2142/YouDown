@@ -21,3 +21,6 @@ Depois de selecionar a opção de resolução desejada, o programa iniciará o d
 Limitações
 
 Este programa é capaz de baixar apenas vídeos públicos do YouTube. Ele não pode baixar vídeos que requerem autenticação ou que foram marcados como privados. Além disso, o programa pode enfrentar problemas ao baixar vídeos muito grandes ou com resoluções muito altas, devido a limitações de memória do sistema.
+
+Link para saber um pouco mais de como foi programado
+https://451cdc36-eb65-48be-890f-85b32ad94552.mynotice.io/

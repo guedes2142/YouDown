@@ -27,3 +27,27 @@ Observações:
 - O vídeo baixado será salvo no diretório atual.
 - Certifique-se de instalar as bibliotecas necessárias antes de executar o script.
 
+## Solução para o erro no pytube 15
+
+Atualmente, no pytube 15, há um erro que pode ocorrer durante o processo de download. Para corrigir esse erro, siga as instruções abaixo:
+
+1. Abra o arquivo `cypher.py`, que está localizado em `Python311\Lib\site-packages\pytube\cypher.py` (certifique-se de substituir `Python311` pelo diretório correto da sua instalação do Python).
+2. Substitua o script atual pelo seguinte código:
+
+```python
+linhas 264 - 274
+function_patterns = [
+    # https://github.com/ytdl-org/youtube-dl/issues/29326#issuecomment-865985377
+    # https://github.com/yt-dlp/yt-dlp/commit/48416bc4a8f1d5ff07d5977659cb8ece7640dcd8
+    # var Bpa = [iha];
+    # ...
+    # a.C && (b = a.get("n")) && (b = Bpa[0](b), a.set("n", b),
+    # Bpa.length || iha("")) }};
+    # In the above case, `iha` is the relevant function name
+    r'a\.[a-zA-Z]\s*&&\s*\([a-z]\s*=\s*a\.get\("n"\)\)\s*&&.*?\|\|\s*([a-z]+)',
+    r'\([a-z]\s*=\s*([a-zA-Z0-9$]+)(\[\d+\])?\([a-z]\)',
+]
+
+
+Lembre-se de substituir `Python311` pelo diretório correto da sua instalação do Python. Essa solução deve resolver o erro relacionado ao pytube 15.
+

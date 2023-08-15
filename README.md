@@ -50,4 +50,54 @@ function_patterns = [
 
 
 Lembre-se de substituir `Python311` pelo diretório correto da sua instalação do Python. Essa solução deve resolver o erro relacionado ao pytube 15.
+```
 
+
+# English version
+
+This script allows you to download YouTube videos using the pytube library. It provides a command-line interface to select the video resolution and download it.
+
+## Requirements
+
+- pytube library (install using the command: `pip install pytube`)
+- colorama library (install using the command: `pip install colorama`)
+
+## How to Use
+
+1. Run the script.
+2. Choose an option:
+    - 1: Download a YouTube video.
+    - 2: Exit the program.
+3. If option 1 is chosen:
+    - Enter a valid link to a YouTube video.
+    - Choose a resolution (1: 1080p, 2: 720p, 3: 360p).
+    - The video will be downloaded and saved in the current directory.
+
+Notes:
+- This script requires an active internet connection.
+- The downloaded video will be saved in the current directory.
+- Make sure to install the necessary libraries before running the script.
+
+## Solution for pytube 15 Error
+
+Currently, in pytube 15, there is an error that may occur during the download process. To fix this error, follow the instructions below:
+
+1. Open the `cypher.py` file, located at `Python311\Lib\site-packages\pytube\cypher.py` (make sure to replace `Python311` with the correct directory of your Python installation).
+2. Replace the current script with the following code:
+
+```python
+lines 264 - 274
+function_patterns = [
+    # https://github.com/ytdl-org/youtube-dl/issues/29326#issuecomment-865985377
+    # https://github.com/yt-dlp/yt-dlp/commit/48416bc4a8f1d5ff07d5977659cb8ece7640dcd8
+    # var Bpa = [iha];
+    # ...
+    # a.C && (b = a.get("n")) && (b = Bpa[0](b), a.set("n", b),
+    # Bpa.length || iha("")) }};
+    # In the above case, `iha` is the relevant function name
+    r'a\.[a-zA-Z]\s*&&\s*\([a-z]\s*=\s*a\.get\("n"\)\)\s*&&.*?\|\|\s*([a-z]+)',
+    r'\([a-z]\s*=\s*([a-zA-Z0-9$]+)(\[\d+\])?\([a-z]\)',
+]```
+
+
+Remember to replace `Python311` with the correct directory of your Python installation. This solution should resolve the error related to pytube 15.

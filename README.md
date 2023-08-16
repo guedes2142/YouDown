@@ -4,7 +4,9 @@
 Update bugfix:
 Substitua o arquivo cipher.py por o que está disponível no repositório!
 Geralmente em..
-```.local/lib/python3.10/site-packages/pytube/cypher.py
+```
+.local/lib/python3.10/site-packages/pytube/cypher.py
+
 ```
 # YouTube Video Downloader
 

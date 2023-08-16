@@ -2,6 +2,11 @@
 
 <img src="https://raw.githubusercontent.com/guedes2142/YouDown/main/Screenshot%20from%202023-05-17%2001-11-02.png" alt="">
 
+Update bugfix:
+Substitua o arquivo cipher.py por o que está disponível no repositório!
+Geralmente em..
+```.local/lib/python3.10/site-packages/pytube/cypher.py
+```
 # YouTube Video Downloader
 
 Este script permite baixar vídeos do YouTube usando a biblioteca pytube. Ele fornece uma interface de linha de comando para selecionar a resolução do vídeo e fazer o download do mesmo.
@@ -34,24 +39,6 @@ Atualmente, no pytube 15, há um erro que pode ocorrer durante o processo de dow
 1. Abra o arquivo `cypher.py`, que está localizado em `Python311\Lib\site-packages\pytube\cypher.py` (certifique-se de substituir `Python311` pelo diretório correto da sua instalação do Python).
 2. Substitua o script atual pelo seguinte código:
 
-```python
-linhas 264 - 274
-function_patterns = [
-    # https://github.com/ytdl-org/youtube-dl/issues/29326#issuecomment-865985377
-    # https://github.com/yt-dlp/yt-dlp/commit/48416bc4a8f1d5ff07d5977659cb8ece7640dcd8
-    # var Bpa = [iha];
-    # ...
-    # a.C && (b = a.get("n")) && (b = Bpa[0](b), a.set("n", b),
-    # Bpa.length || iha("")) }};
-    # In the above case, `iha` is the relevant function name
-    r'a\.[a-zA-Z]\s*&&\s*\([a-z]\s*=\s*a\.get\("n"\)\)\s*&&.*?\|\|\s*([a-z]+)',
-    r'\([a-z]\s*=\s*([a-zA-Z0-9$]+)(\[\d+\])?\([a-z]\)',
-]
-
-
-Lembre-se de substituir `Python311` pelo diretório correto da sua instalação do Python. Essa solução deve resolver o erro relacionado ao pytube 15.
-```
-
 
 # English version
 
@@ -78,26 +65,4 @@ Notes:
 - The downloaded video will be saved in the current directory.
 - Make sure to install the necessary libraries before running the script.
 
-## Solution for pytube 15 Error
 
-Currently, in pytube 15, there is an error that may occur during the download process. To fix this error, follow the instructions below:
-
-1. Open the `cypher.py` file, located at `Python311\Lib\site-packages\pytube\cypher.py` (make sure to replace `Python311` with the correct directory of your Python installation).
-2. Replace the current script with the following code:
-
-```python
-lines 264 - 274
-function_patterns = [
-    # https://github.com/ytdl-org/youtube-dl/issues/29326#issuecomment-865985377
-    # https://github.com/yt-dlp/yt-dlp/commit/48416bc4a8f1d5ff07d5977659cb8ece7640dcd8
-    # var Bpa = [iha];
-    # ...
-    # a.C && (b = a.get("n")) && (b = Bpa[0](b), a.set("n", b),
-    # Bpa.length || iha("")) }};
-    # In the above case, `iha` is the relevant function name
-    r'a\.[a-zA-Z]\s*&&\s*\([a-z]\s*=\s*a\.get\("n"\)\)\s*&&.*?\|\|\s*([a-z]+)',
-    r'\([a-z]\s*=\s*([a-zA-Z0-9$]+)(\[\d+\])?\([a-z]\)',
-]```
-
-
-Remember to replace `Python311` with the correct directory of your Python installation. This solution should resolve the error related to pytube 15.

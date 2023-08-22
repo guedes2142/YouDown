@@ -2,7 +2,7 @@
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/N9PjL2t/Screenshot-from-2023-08-15-22-17-38.png" alt="Screenshot-from-2023-08-15-22-17-38" border="0"></a>
 
 Update bugfix:
-Substitua o arquivo cipher.py por o que está disponível no repositório!
+Substitua o arquivo cipher.py que está disponível no repositório!
 Geralmente em..
 ```
 .local/lib/python3.10/site-packages/pytube/cypher.py
